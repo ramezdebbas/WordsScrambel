@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Babies & Kids of 2011</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/split/split.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="/pages/split/split.js"></script>
+	<script>
+	    var words = new Array(10);
+	    for (var i = 0; i < 3; i++) {
+	        words[i] = new Array(3);
+	    }
+	    var temp = new Array();
+	    function readpictureenglish() {
+	        // valueinarray();
+	        document.getElementById("imagespan").innerHTML = "";
+	        window.txtcheck.value = "";
+	      // if (wordtype == 'enlish') {
+	            words[0][0] = "BIG"; words[0][1] = "HOT"; words[0][2] = "FAST";
+	            words[1][0] = "SLOW"; words[1][1] = "NEW"; words[1][2] = "CHEAP";
+
+	            words[2][0] = "BUSY"; words[2][1] = "OLD"; words[2][2] = "HEIGH";
+
+	            var rand1 = Math.floor((Math.random() * 3) + 0);
+	            var rand2 = Math.floor((Math.random() * 3) + 0);
+	            //document.getElementById("myImage").src = "/images/z.png";
+
+	            temp = words[rand1][rand2];
+	        // an array to be returned by the function
+	            var returnArray = new Array(temp.length);
+	        //copy each element of the argument array to the return array
+	            for (var i = 0; i < temp.length; i = i + 1) {
+	                returnArray[i] = temp[i];
+
+	            }
+
+	            var tempArray = new Array(5);
+
+	            tempArray[0] = returnArray[0];
+
+	            returnArray[0] = returnArray[1];
+
+	            returnArray[1] = tempArray[0];
+
+
+	            tempArray[2] = returnArray[2];
+
+	            returnArray[2] = returnArray[0];
+
+	            returnArray[0] = tempArray[2];
+	            
+	            for (var i = 0 ; i < temp.length; i++) {
+
+	                var im = document.createElement("img");
+	                im.src = "/images/" +returnArray[i] + ".png";
+	                document.getElementById("imagespan").appendChild(im);
+
+	            }
+	      //  }//end of if
+	    }//end of function 
+
+
+	    
+
+	    
+	    function comareto() {
+          
+	        if (txtcheck.value.toUpperCase() == temp) {
+	            txtcheck.value = "Congratulation your answar is correct!";
+	        }
+	        else {
+	            txtcheck.value = "   Sorry your answer is not correct!";
+	        }
+	    }
+
+
+
+	    function readpicturefood() {
+	        // valueinarray();
+	        document.getElementById("imagespan").innerHTML = "";
+	        txtcheck.value = "";
+	        // if (wordtype == 'enlish') {
+	        words[0][0] = "TORACR"; words[0][1] = "TIRUF"; words[0][2] = "APPLE";
+	        words[1][0] = "BREAD"; words[1][1] = "CANDY"; words[1][2] = "RICE";
+
+	        words[2][0] = "BANANA"; words[2][1] = "POTATO"; words[2][2] = "PIZZA";
+
+	        var rand1 = Math.floor((Math.random() * 3) + 0);
+	        var rand2 = Math.floor((Math.random() * 3) + 0);
+	        //document.getElementById("myImage").src = "/images/z.png";
+
+	        var temp2 = new Array();
+	        var iner;
+	        temp = words[rand1][rand2];
+	        
+
+	        // an array to be returned by the function
+	        var returnArray = new Array(temp.length);
+	        //copy each element of the argument array to the return array
+	        for (var i = 0; i < temp.length; i = i + 1) {
+	            returnArray[i] = temp[i];
+	            
+	        }
+
+	        var tempArray = new Array(5);
+
+	        tempArray[0] = returnArray[0];
+
+	        returnArray[0] = returnArray[1];
+
+	        returnArray[1] = tempArray[0];
+
+
+	        tempArray[2] = returnArray[2];
+
+	        returnArray[2] = returnArray[0];
+
+	        returnArray[0] = tempArray[2];
+
+	        for (var i = 0 ; i < temp.length; i++) {
+
+	            var im = document.createElement("img");
+	            im.src = "/images/" + returnArray[i] + ".png";
+	            document.getElementById("imagespan").appendChild(im);
+
+	        }
+	        //  }//end of if
+	    }//end of function foo
+
+
+
+        // start of human body function
+	    function readpicturehbody() {
+	        // valueinarray();
+	        document.getElementById("imagespan").innerHTML = "";
+	        txtcheck.value = "";
+	        // if (wordtype == 'enlish') {
+	        words[0][0] = "ARM "; words[0][1] = "BONE"; words[0][2] = "LUNG";
+	        words[1][0] = "HEART"; words[1][1] = "LIVER"; words[1][2] = "FINGER";
+
+	        words[2][0] = "KNEE"; words[2][1] = "SHOULDER"; words[2][2] = "TEETH";
+
+	        var rand1 = Math.floor((Math.random() * 3) + 0);
+	        var rand2 = Math.floor((Math.random() * 3) + 0);
+	        //document.getElementById("myImage").src = "/images/z.png";
+
+	        
+	        temp = words[rand1][rand2];
+	        // an array to be returned by the function
+	        var returnArray = new Array(temp.length);
+	        //copy each element of the argument array to the return array
+	        for (var i = 0; i < temp.length; i = i + 1) {
+	            returnArray[i] = temp[i];
+
+	        }
+
+	        var tempArray = new Array(5);
+
+	        tempArray[0] = returnArray[0];
+
+	        returnArray[0] = returnArray[1];
+
+	        returnArray[1] = tempArray[0];
+
+
+	        tempArray[2] = returnArray[2];
+
+	        returnArray[2] = returnArray[0];
+
+	        returnArray[0] = tempArray[2];
+
+	        for (var i = 0 ; i < temp.length; i++) {
+
+	            var im = document.createElement("img");
+	            im.src = "/images/" + returnArray[i] + ".png";
+	            document.getElementById("imagespan").appendChild(im);
+
+	        }
+	        //  }//end of if
+	    }//end of function human body
+
+
+	    // start of weather function
+	    function readpictureweather() {
+	        // valueinarray();
+	        document.getElementById("imagespan").innerHTML = "";
+	        txtcheck.value = "";
+	        // if (wordtype == 'enlish') {
+	        words[0][0] = "CLOUD"; words[0][1] = "HOT"; words[0][2] = "SUNNY";
+	        words[1][0] = "CLOUDY"; words[1][1] = "WIND"; words[1][2] = "SNOW";
+
+	        words[2][0] = "SUN"; words[2][1] = "FREEZE"; words[2][2] = "TORNADO";
+
+	        var rand1 = Math.floor((Math.random() * 3) + 0);
+	        var rand2 = Math.floor((Math.random() * 3) + 0);
+	        //document.getElementById("myImage").src = "/images/z.png";
+
+	        
+	        temp = words[rand1][rand2];
+	        // an array to be returned by the function
+	        var returnArray = new Array(temp.length);
+	        //copy each element of the argument array to the return array
+	        for (var i = 0; i < temp.length; i = i + 1) {
+	            returnArray[i] = temp[i];
+
+	        }
+
+	        var tempArray = new Array(5);
+
+	        tempArray[0] = returnArray[0];
+
+	        returnArray[0] = returnArray[1];
+
+	        returnArray[1] = tempArray[0];
+
+
+	        tempArray[2] = returnArray[2];
+
+	        returnArray[2] = returnArray[0];
+
+	        returnArray[0] = tempArray[2];
+
+	        for (var i = 0 ; i < temp.length; i++) {
+
+	            var im = document.createElement("img");
+	            im.src = "/images/" + returnArray[i] + ".png";
+	            document.getElementById("imagespan").appendChild(im);
+
+	        }
+	        //  }//end of if
+	    }//end of function weather
+
+	    // start of animal function
+	    function readpictureanimal() {
+	        // valueinarray();
+	        document.getElementById("imagespan").innerHTML = "";
+	        txtcheck.value = "";
+	        // if (wordtype == 'enlish') {
+	        words[0][0] = "BIRD"; words[0][1] = "DOG"; words[0][2] = "DONKEY";
+	        words[1][0] = "CAT"; words[1][1] = "HORSE"; words[1][2] = "LION";
+
+	        words[2][0] = "MONKEY"; words[2][1] = "FROG"; words[2][2] = "ELEPHANT";
+
+	        var rand1 = Math.floor((Math.random() * 3) + 0);
+	        var rand2 = Math.floor((Math.random() * 3) + 0);
+	        //document.getElementById("myImage").src = "/images/z.png";
+
+	        
+	        temp = words[rand1][rand2];
+
+	        // an array to be returned by the function
+	        var returnArray = new Array(temp.length);
+	        //copy each element of the argument array to the return array
+	        for (var i = 0; i < temp.length; i = i + 1) {
+	            returnArray[i] = temp[i];
+
+	        }
+
+	        var tempArray = new Array(5);
+
+	        tempArray[0] = returnArray[0];
+
+	        returnArray[0] = returnArray[1];
+
+	        returnArray[1] = tempArray[0];
+
+
+	        tempArray[2] = returnArray[2];
+
+	        returnArray[2] = returnArray[0];
+
+	        returnArray[0] = tempArray[2];
+
+	        for (var i = 0 ; i < temp.length; i++) {
+
+	            var im = document.createElement("img");
+	            im.src = "/images/" + returnArray[i] + ".png";
+	            document.getElementById("imagespan").appendChild(im);
+
+	        }
+	        //  }//end of if
+	    }//end of function animal
+
+    </script>
+</head>
+<body >
+    <!-- This template is used to display each item in the ListView declared below. -->
+    <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+        <div class="item">
+            <img class="item-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
+            <div class="item-info">
+                <h3 class="item-title win-type-ellipsis" data-win-bind="textContent: title"></h3>
+                <h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: subtitle"></h6>
+                <h4 class="item-description" data-win-bind="textContent: description">learn words adjectives</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- The content that will be loaded and displayed. -->
+    <div class="splitpage fragment" style="background-image: url('/pages/split/fullback.jpg');">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Fun English Games</span>
+            </h1>
+        </header>
+        <div class="itemlistsection" aria-label="List column">
+            <div class="itemlist win-selectionstylefilled"  aria-label="List of this group's items" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'single', swipeBehavior: 'none', tapBehavior: 'toggleSelect' }"></div>
+        </div>
+        <div class="articlesection" aria-atomic="true" aria-label="Item detail column" aria-live="assertive">
+            <article>
+                <header class="header">
+                    <div class="text">
+                        <h2 class="article-title win-type-ellipsis" data-win-bind="textContent: title">Adjacent words Scramble</h2>
+                        <h4 class="article-subtitle" data-win-bind="textContent: subtitle"></h4>
+                    </div>
+                    
+					<img class="article-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
+                </header>
+                <div class="article-content" id="imagediv" data-win-bind="innerHTML: content"></div>
+            </article>
+        	<br />
+			 <h2 style="animation-name: blink; background-image: linear-gradient(white, #92EAB6); color: #1E1A1A; height: 63.35px; text-align: center;"> see the word  and enter correct word below!</h2>
+        	<span id="imagespan">&nbsp;</span>
+            <br />
+           <br /><br />
+            <span id="btnplaysapn">&nbsp;</span>
+            <span id="txtsapn">&nbsp;</span>
+              <span id="btspan">&nbsp;</span>
+            
+           
+            
+        </div>
+    </div>
+</body>
+</html>
